@@ -1,0 +1,202 @@
+/* *COMMON CSS STARTS */
+
+:root {
+    --bgc: white; 
+    --primaryColor: #222;
+    --txtColor: #222;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--bgc);
+    --txtColor: white;
+    transition: .35s;
+    -webkit-transition: .35s;
+    -moz-transition: .35s;
+    -ms-transition: .35s;
+    -o-transition: .35s;
+}
+
+body.darkMode {
+    --bgc: #222; 
+    --primaryColor: white;
+    --txtColor: white;
+    transition: .35s;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+li {
+    list-style: none;
+}
+
+.container {
+    width: 1280px;
+    margin: auto;
+}
+
+.row {
+    flex-wrap: wrap;
+    display: flex;
+}
+
+/* *COMMON CSS ENDS */
+
+/* *NAVBAR STARTS HERE */
+
+
+nav {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+nav .btn {
+    padding: 15px;
+    background-color: #222;
+    color: whitesmoke;
+    margin: 15px 0;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+
+
+/* *NAV DARKMODE  STARTS*/
+
+
+
+nav .darkModeCnt {
+    display: inline-block;
+    justify-content: right;
+    margin-bottom: 20px;
+    margin-right: 50px;
+    margin-top: 15px;
+}
+
+nav .darkModeCnt .wrapper {
+    display: flex;
+    align-items: center;
+}
+
+nav .darkModeCnt .wrapper h3 {
+    font-size: 32px;
+    margin-right: 120px;
+    color: var(--primaryColor);
+}
+
+
+.darkModeBtn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.darkModeBtn .sunIcon {
+    width: 100%;
+    height: 100%;
+    color: var(--bgc);
+    background-color: #e9e90e;
+    display: block;
+    line-height: 40px;
+}
+.darkModeBtn .moonIcon {
+    width: 100%;
+    height: 100%;
+    color: var(--bgc);
+    background-color: var(--primaryColor);
+    display: block;
+    line-height: 40px;
+}
+
+
+body.darkMode .darkModeBtn .moonIcon {
+    margin-top: -100%;
+}
+
+
+
+/* *NAVBAR ENDS HERE */
+
+/* *sidebar starts */
+.sidebar {
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.5);
+    inset: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s;
+}
+
+.sidebar.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+.sidebarCnt {
+    width: 80%;
+    max-width: 450px;
+    height: 100%;
+    background-color: var(--bgc);
+    padding-top: 100px;
+    text-align: center;
+    position: relative;
+    transform: translateX(-100%);
+    transition: 0.35s;
+
+}
+
+.sidebar.active .sidebarCnt {
+    visibility: visible;
+    opacity: 1;
+    transform: translateX(0);
+}
+
+
+.sidebarCnt .crossBtn {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 20px;
+    color: var(--txtColor);
+    padding: 12px;
+    background-color: brown;
+    cursor: pointer;
+    bottom: none;
+    outline: none;
+}
+
+.sidebarCnt li {
+    padding: 20px 0;
+}
+
+.sidebarCnt li a {
+    font-weight: 600px;
+    font-size: 18px;
+    color: #222;
+}
+
+
+
+
+/* *sidebar ends */
